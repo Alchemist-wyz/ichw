@@ -52,9 +52,15 @@ def test_dispose_str():
     assert(dispose_str('arfh7384y83efjrf[p][pijernv89urnfv ""??22.222!@#@!@')==22.222)
     assert(dispose_str('sfbsrfuba3278yr7346*&*@#^*&hfbuv?:::<>23673  : 290.0dcre')==290.0)
     assert(dispose_str('duhrferf8h23ue9ufr8f!@&^^@*#*&@**#ysdbfrb uhur<>?>> hyfh250.250!#@!bbfc syhf')==250.250)
+def test_exchange():
+    assert(exchange('USD','CNY',2.5)==16.315375)
+    assert(exchange('EUR','CNY',233)==1814.3443762342)
+    assert(exchange('CNY','USD',250)==38.307424745064)
+    assert(exchange('CNY','EUR',290)==37.242102924389)
 def test_all():
     '''test whether all fuctions works successfully, but i cannot test get_str, because this is not designed by me '''
     test_creat_para()
     test_dispose_str()
+    test_exchange()
     print('all test passed!')
-test_all()
+
